@@ -19,6 +19,9 @@
                 <input id="password" name="password" class="form-control" type="password">
             </div>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
+            <div class="form-group">
+                <a href="#">Forgot Password? Click here.</a>
+            </div>
         </form>
     </div>
 </body>
