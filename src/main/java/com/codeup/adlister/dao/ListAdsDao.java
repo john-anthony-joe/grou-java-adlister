@@ -21,6 +21,11 @@ public class ListAdsDao implements Ads {
         return null;
     }
 
+    @Override
+    public Ad adById(long id) {
+        return null;
+    }
+
     public Long insert(Ad ad) {
         // make sure we have ads
         if (ads == null) {

@@ -18,9 +18,11 @@
             <div class="col-md-6">
                 <h2>${ad.title}</h2>
                 <p>${ad.description}</p>
+                <button><a href="/editUpdate?id=${ad.id}">edit</a></button>
             </div>
         </c:forEach>
     </div>
 
 </body>
+
 </html>

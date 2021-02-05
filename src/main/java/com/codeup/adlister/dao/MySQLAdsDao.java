@@ -53,6 +53,21 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public Ad adById(long id) {
+        String query = "SELECT * FROM bats WHERE id = ?";
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving the selected ad.", e);
+        }
+    }
+
+    @Override
     public Long insert(Ad ad) {
         try {
             String insertQuery = "INSERT INTO bats(user_id, title, description) VALUES (?, ?, ?)";
