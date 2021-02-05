@@ -19,10 +19,13 @@ public class ViewProfileServlet extends HttpServlet {
             return;
         }
 
-        String username = request.getParameter("username");
-        User user = DaoFactory.getUsersDao().findByUsername(username);
-        System.out.println(user.getEmail());
-        request.getSession().setAttribute("userAds", DaoFactory.getAdsDao().userAds(1));
+//        String username = request.getParameter("username");
+//        User user = DaoFactory.getUsersDao().findByUsername(username);
+//        System.out.println(user.getEmail());
+
+        User user = (User)request.getSession().getAttribute("user");
+
+        request.setAttribute("userAds", DaoFactory.getAdsDao().userAds(user.getId()));
 
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
