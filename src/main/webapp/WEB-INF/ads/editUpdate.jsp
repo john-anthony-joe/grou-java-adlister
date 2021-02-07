@@ -11,9 +11,21 @@
     <title>yo</title>
 </head>
 <body>
-    <h1>edit</h1>
+    <div class="container">
+        <h1>Edit your Ad</h1>
+        <form action="/editUpdate" method="post">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input id="title" name="title" class="form-control" type="text" value="${editAd.title}">
+                <input type="hidden" value="${editAd.id}" name="id">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" class="form-control">${editAd.description}</textarea>
+            </div>
+            <input type="submit" class="btn btn-block btn-primary">
+        </form>
+    </div>
 
-    <h3>${editAd.title}</h3>
-    <h3>${editAd.description}</h3>
 </body>
 </html>

@@ -1,3 +1,5 @@
+<%@ page import="com.codeup.adlister.dao.Ads" %>
+<%@ page import="com.codeup.adlister.dao.DaoFactory" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -16,9 +18,13 @@
 
         <c:forEach var="ad" items="${userAds}">
             <div class="col-md-6">
-                <h2>${ad.title}</h2>
-                <p>${ad.description}</p>
-                <button><a href="/editUpdate?id=${ad.id}">edit</a></button>
+                <form action="/profile" method="post">
+                    <h2>${ad.title}</h2>
+                    <p>${ad.description}</p>
+                    <button><a href="/editUpdate?id=${ad.id}">edit</a></button>
+                    <button type="submit" id="delete" value="${ad.id}" name="delete">Delete</button>
+                </form>
+
             </div>
         </c:forEach>
     </div>
