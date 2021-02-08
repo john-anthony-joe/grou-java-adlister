@@ -90,7 +90,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public void update(long id, String title, String image_url, int start_year, int end_year, String description){
         try {
-            String updateQuery = "UPDATE bats SET title = ?, image_ur = ?, start_year = ?, end_year = ?, description = ? WHERE id = ?";
+            String updateQuery = "UPDATE bats SET title = ?, image_url = ?, start_year = ?, end_year = ?, description = ? WHERE id = ?";
             PreparedStatement stmt = connection.prepareStatement(updateQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, title);
             stmt.setString(2, image_url);

@@ -14,6 +14,18 @@
                 <input id="title" name="title" class="form-control" type="text">
             </div>
             <div class="form-group">
+                <label for="image_url">Image Url</label>
+                <input id="image_url" name="image_url" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="start_year">Start Year</label>
+                <input id="start_year" name="start_year" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="end_year">End Year</label>
+                <input id="end_year" name="end_year" class="form-control" type="text">
+            </div>
+            <div class="form-group">
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
