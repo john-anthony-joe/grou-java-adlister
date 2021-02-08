@@ -5,12 +5,28 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
+    <style>
+        body {
+            /*background-image: url("/css/img/wallpaper-pink-with-letter-cape-logo.jpg");*/
+            color: yellow;
+            background-color: black;
+        }
+
+        .navbar {
+            color: black;
+            background-color: yellow;
+        }
+
+        a {
+            color: black;
+        }
+    </style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Welcome to the Batcave!</h1>
+    <h1>Welcome to the BatLister!</h1>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">

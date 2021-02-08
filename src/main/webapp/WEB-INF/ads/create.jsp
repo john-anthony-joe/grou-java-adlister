@@ -4,8 +4,25 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
+    <style>
+        body {
+            /*background-image: url("/css/img/wallpaper-pink-with-letter-cape-logo.jpg");*/
+            color: yellow;
+            background-color: black;
+        }
+
+        .navbar {
+            color: black;
+            background-color: yellow;
+        }
+
+        a {
+            color: black;
+        }
+    </style>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
     <div class="container">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">

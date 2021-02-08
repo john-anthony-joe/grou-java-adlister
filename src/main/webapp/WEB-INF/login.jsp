@@ -4,11 +4,24 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
+    <style>
+        body {
+            /*background-image: url("/css/img/wallpaper-pink-with-letter-cape-logo.jpg");*/
+            color: yellow;
+            background-color: black;
+        }
+
+        .navbar {
+            color: black;
+            background-color: yellow;
+        }
+
+    </style>
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Please Log In</h1>
+        <h1>Bat Login</h1>
         <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>

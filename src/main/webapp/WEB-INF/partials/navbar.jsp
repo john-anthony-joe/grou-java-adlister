@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand">Bat Lister</a>
-            <a class="navbar-brand" href="/ads">BatCave</a>
+            <a class="navbar-brand" href="/ads">BatLister</a>
+            <a class="navbar-brand" href="/profile">BatCave</a>
             <a class="navbar-brand" href="/ads/create">Bat Signal</a>
         </div>
         <ul class="nav navbar-nav navbar-right">

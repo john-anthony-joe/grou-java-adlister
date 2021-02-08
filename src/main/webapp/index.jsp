@@ -7,14 +7,23 @@
     </jsp:include>
     <style>
         body {
+            /*background-image: url("/css/img/wallpaper-pink-with-letter-cape-logo.jpg");*/
+            color: yellow;
+            background-color: black;
+        }
+        .navbar{
+            color: black;
             background-color: yellow;
+        }
+        a{
+            color: black;
         }
     </style>
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Welcome to the Adlister!</h1>
+        <h1>Welcome to the Batlister! Gotham's Gallery of Guardians</h1>
     </div>
 </body>
 </html>

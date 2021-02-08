@@ -9,6 +9,22 @@
 <html>
 <head>
     <title>yo</title>
+    <style>
+        body {
+            /*background-image: url("/css/img/wallpaper-pink-with-letter-cape-logo.jpg");*/
+            color: yellow;
+            background-color: black;
+        }
+
+        .navbar {
+            color: black;
+            background-color: yellow;
+        }
+
+        a {
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <div class="container">

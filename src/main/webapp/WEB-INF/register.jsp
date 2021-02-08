@@ -5,6 +5,22 @@
     <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Register For Our Site!" />
     </jsp:include>
+    <style>
+        body {
+            /*background-image: url("/css/img/wallpaper-pink-with-letter-cape-logo.jpg");*/
+            color: yellow;
+            background-color: black;
+        }
+
+        .navbar {
+            color: black;
+            background-color: yellow;
+        }
+
+        a {
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
