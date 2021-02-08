@@ -19,8 +19,10 @@
         <c:forEach var="ad" items="${userAds}">
             <div class="col-md-6">
                     <h2>${ad.title}</h2>
+                    <img src="${ad.image_url}" width="200px" alt="${ad.image_url}">
+                    <p>${ad.start_year} - ${ad.end_year}</p>
                     <p>${ad.description}</p>
-                    <button><a href="/editUpdate?id=${ad.id}">edit</a></button>
+                    <button><a href="/editUpdate?id=${ad.id}">Edit</a></button>
                     <form action="/delete" method="post">
                         <button type="submit" id="delete" value="${ad.id}" name="delete">Delete</button>
                     </form>

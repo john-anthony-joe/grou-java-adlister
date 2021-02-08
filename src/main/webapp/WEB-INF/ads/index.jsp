@@ -15,6 +15,8 @@
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h2>${ad.title}</h2>
+            <img src="${ad.image_url}" width="200px" alt="${ad.image_url}">
+            <p>${ad.start_year} - ${ad.end_year}</p>
             <p>${ad.description}</p>
         </div>
     </c:forEach>

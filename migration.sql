@@ -18,7 +18,7 @@ CREATE TABLE bats (
     title VARCHAR(240) NOT NULL,
     start_year INT UNSIGNED NOT NULL,
     end_year INT UNSIGNED NOT NULL,
-    image_url VARCHAR(240) NOT NULL,
+    image_url VARCHAR(1000) NOT NULL,
     description TEXT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
