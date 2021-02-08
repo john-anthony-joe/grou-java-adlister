@@ -10,9 +10,11 @@ public class Validate {
     }
 
     public static boolean userNameExists(List<String> currentUsers, String registerAttemptName) {
-        for (String name : currentUsers) {
-            if (registerAttemptName.equals(name)) {
-                return true;
+        if (currentUsers != null) {
+            for (String name : currentUsers) {
+                if (registerAttemptName.equals(name)) {
+                    return true;
+                }
             }
         }
         return false;

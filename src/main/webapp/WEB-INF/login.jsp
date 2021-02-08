@@ -20,7 +20,7 @@
             </div>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
             <div class="form-group">
-                <a href="#">Forgot Password? Click here.</a>
+                <a href="/forgotPassword">Forgot Password? Click here.</a>
             </div>
         </form>
     </div>
