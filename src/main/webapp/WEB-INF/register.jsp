@@ -15,7 +15,7 @@
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
                 <c:if test="${sessionScope.currentUserExists}">
-                    <small class="errorMessage"> Sorry, this name is already chosen! </small>
+                    <small class="errorMessage"> Sorry, this username is already in use! </small>
                 </c:if>
             </div>
             <div class="form-group">
@@ -26,7 +26,7 @@
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
                 <c:if test="${sessionScope.unsafePassword}">
-                    <small class="errorMessage"> IMPORTANT: Password must be between 6-12 characters, including a
+                    <small class="errorMessage"> IMPORTANT! Password must be between 6-12 characters, including a
                         capital letter and number.</small>
                 </c:if>
             </div>
