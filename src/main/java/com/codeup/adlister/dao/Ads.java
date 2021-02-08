@@ -14,7 +14,7 @@ public interface Ads {
 
     void delete(long id);
 
-    void update(long id, String title, String description);
+    void update(long id, String title, String image_url, int start_year, int end_year, String description);
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 }

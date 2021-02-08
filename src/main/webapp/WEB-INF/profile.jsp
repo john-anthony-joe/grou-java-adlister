@@ -18,12 +18,12 @@
 
         <c:forEach var="ad" items="${userAds}">
             <div class="col-md-6">
-                <form action="/profile" method="post">
                     <h2>${ad.title}</h2>
                     <p>${ad.description}</p>
                     <button><a href="/editUpdate?id=${ad.id}">edit</a></button>
-                    <button type="submit" id="delete" value="${ad.id}" name="delete">Delete</button>
-                </form>
+                    <form action="/delete" method="post">
+                        <button type="submit" id="delete" value="${ad.id}" name="delete">Delete</button>
+                    </form>
 
             </div>
         </c:forEach>

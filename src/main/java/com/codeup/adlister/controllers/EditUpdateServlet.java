@@ -34,11 +34,14 @@ public class EditUpdateServlet extends HttpServlet {
 //        User user = (User) request.getSession().getAttribute("user");
         String adId = request.getParameter("id");
         String title = request.getParameter("title");
+        String image_url = request.getParameter("image_url");
+        String start_year = request.getParameter("start_year");
+        String end_year = request.getParameter("end_year");
         String description = request.getParameter("description");
 
         System.out.println(title + description + adId);
 
-        DaoFactory.getAdsDao().update(Long.parseLong(adId), title, description);
+        DaoFactory.getAdsDao().update(Long.parseLong(adId), title, image_url, Integer.parseInt(start_year), Integer.parseInt(end_year), description);
         response.sendRedirect("/profile");
     }
 }

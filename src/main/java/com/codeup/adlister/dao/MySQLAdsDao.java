@@ -70,10 +70,13 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO bats(user_id, title, description) VALUES (?, ?, ?)";
+            String insertQuery = "INSERT INTO bats(user_id, title, image_url, start_year, end_year,  description) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
+            stmt.setString(4, ad.getImage_url());
+            stmt.setInt(5, ad.getStart_year());
+            stmt.setInt(6, ad.getEnd_year());
             stmt.setString(3, ad.getDescription());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
@@ -85,13 +88,16 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public void update(long id, String title, String description){
+    public void update(long id, String title, String image_url, int start_year, int end_year, String description){
         try {
-            String updateQuery = "UPDATE bats SET title = ?, description = ? WHERE id = ?";
+            String updateQuery = "UPDATE bats SET title = ?, image_ur = ?, start_year = ?, end_year = ?, description = ? WHERE id = ?";
             PreparedStatement stmt = connection.prepareStatement(updateQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, title);
-            stmt.setString(2, description);
-            stmt.setLong(3, id);
+            stmt.setString(2, image_url);
+            stmt.setInt(3, start_year);
+            stmt.setInt(4, end_year);
+            stmt.setString(5, description);
+            stmt.setLong(6, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error updating this ad.", e);
@@ -104,7 +110,7 @@ public class MySQLAdsDao implements Ads {
             String updateQuery = "DELETE FROM bats WHERE id = ?";
             PreparedStatement stmt = connection.prepareStatement(updateQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, id);
-            stmt.executeQuery();
+            stmt.executeUpdate();
         }catch (SQLException e) {
             throw new RuntimeException("Error deleting this ad.", e);
         }
@@ -115,6 +121,9 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("id"),
             rs.getLong("user_id"),
             rs.getString("title"),
+            rs.getString("image_url"),
+            rs.getInt("start_year"),
+            rs.getInt("end_year"),
             rs.getString("description")
         );
     }
